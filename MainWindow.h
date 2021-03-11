@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QPushButton>
 
 namespace Ui {
 class MainWindow;
@@ -13,5 +14,6 @@ public:
         MainWindow(QWidget *parent = 0);
 	~MainWindow();
 private:
+	QPushButton b_close;
 	Ui::MainWindow *ui;
 };
