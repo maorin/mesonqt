@@ -12,7 +12,12 @@ class MainWindow : public QMainWindow {
 
 public:
         MainWindow(QWidget *parent = 0);
+        void sendSlot();
 	~MainWindow();
+
+signals:
+	void mySignal();
+
 private:
 	QPushButton b_close;
 	Ui::MainWindow *ui;

@@ -12,10 +12,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 	b_close.resize(BUTTON_SIZE);
 
 
-	connect(&b_close, &QPushButton::pressed, this, &MainWindow::close);
+	//connect(&b_close, &QPushButton::pressed, this, &MainWindow::close);
+	connect(&b_close, &QPushButton::pressed, this, &MainWindow::sendSlot);
 }
 
 
 MainWindow::~MainWindow() {
 }
 
+
+void MainWindow::sendSlot(){
+	emit mySignal();
+}

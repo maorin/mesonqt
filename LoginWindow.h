@@ -14,6 +14,7 @@ class LoginWindow : public QMainWindow {
 public:
         LoginWindow(QWidget *parent = 0);
         void loginSpice();
+        void dealsub();
 
 	~LoginWindow();
 private:

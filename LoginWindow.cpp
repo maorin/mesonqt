@@ -1,4 +1,5 @@
 #include "LoginWindow.h"
+#include "MainWindow.h"
 #include <QWidget>
 #include <QPushButton>
 #include <QSize>
@@ -22,6 +23,8 @@ LoginWindow::LoginWindow(QWidget *parent) : QMainWindow(parent) {
 
 	connect(&b_login, &QPushButton::pressed, this, &LoginWindow::loginSpice);
 
+	connect(&w, &MainWindow::mySignal, this, &LoginWindow::dealsub);
+
 }
 
 
@@ -32,4 +35,10 @@ void LoginWindow::loginSpice(){
 	//b_login.setText("l111");
 	w.show();
 	this->hide();
+}
+
+void LoginWindow::dealsub(){
+	//b_login.setText("l111");
+	w.hide();
+	this->show();
 }
